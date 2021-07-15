@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const donenv = require('dotenv').config();
+const cors = require('cors');
 const app = express();
 
 app.use(express.static(`${__dirname}/public`));
@@ -8,6 +9,13 @@ app.use(express.json()); // importand to resive json data "MIDDELWAARE"
 
 const connectDB = require('./config/db');
 connectDB();
+
+// cors
+
+const coresOptions = {
+    origin: 'http://127.0.0.1:3000',
+};
+app.use(cors(coresOptions));
 
 // ejs engine &&&   templets
 
