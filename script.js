@@ -6,7 +6,7 @@ connectDb();
 
 async function deletData() {
     const files = await File.find({
-        createdAt: { $lt: new Date(Date.now() - 1 * 60 * 60 * 1000) },
+        createdAt: { $lt: new Date(Date.now() - 1000) },
     });
     if (files.length) {
         for (const file of files) {
