@@ -89,7 +89,7 @@ const sendingmailConroler = async (req, res) => {
     // sending mail
     sendMail({
         from: emailFrom,
-        to: emailTp,
+        to: emailTo,
         subject: 'file shearing',
         text: `${emailFrom} shared a file with you`,
         html: emailTemplate({

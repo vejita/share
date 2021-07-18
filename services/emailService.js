@@ -1,6 +1,6 @@
 const nodemaler = require('nodemailer');
 
-async function sendMail({ from, to, suject, text, html }) {
+async function sendMail({ from, to, subject, text, html }) {
     let transporter = nodemaler.createTransport({
         host: process.env.SMTP_HOST,
         PORT: process.env.SMTP_PORT,
