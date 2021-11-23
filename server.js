@@ -13,7 +13,7 @@ connectDB();
 // cors
 
 const coresOptions = {
-    origin: 'http://127.0.0.1:3000',
+    origin: 'http://127.0.0.1:3001',
 };
 app.use(cors(coresOptions));
 
